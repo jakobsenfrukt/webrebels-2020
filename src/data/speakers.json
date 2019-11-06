@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Juan Pablo Buriticá ",
+    "image": "https://2016.webrebels.org/img/rebels/juanpabloburitica.jpg",
+    "title": "VP of Engineering at ride.com",
+    "bio": "He leads a distributed team throughout the US and Latin America that is working to reinvent how people commute to work and take 1 million cars of the road.",
+    "talk": {
+      "title": "How Long On That Ticket?",
+      "subtitle": "Proven Recipes That Enhance Collaboration",
+      "text": "Programming can often feel like a solitarypursuit – it’s just you and your computer against the world – it’s easy to forget that you are working alongside a team of people to accomplish a project as a group. Professional cooks do this every day, sometimes twice a day with shorter timeframes to feed hungry patrons. In this talk, Juan Pablo & Patricia sauté their way through communication recipes used every night in the fast paced world of cooks and kitchens to support each other as they collaborate on making great food. Let’s explore how engineering teams can implement them to whip up better software."
+    },
+    "id": "juanpablo"
+  },
+  {
+    "name": "Elise Jakobsen",
+    "title": "VP of Engineering at ride.com",
+    "bio": "He leads a distributed team throughout the US and Latin America that is working to reinvent how people commute to work and take 1 million cars of the road.",
+    "talk": {
+      "title": "How Long On That Ticket?",
+      "subtitle": "Proven Recipes That Enhance Collaboration",
+      "text": "Programming can often feel like a solitarypursuit – it’s just you and your computer against the world – it’s easy to forget that you are working alongside a team of people to accomplish a project as a group. Professional cooks do this every day, sometimes twice a day with shorter timeframes to feed hungry patrons. In this talk, Juan Pablo & Patricia sauté their way through communication recipes used every night in the fast paced world of cooks and kitchens to support each other as they collaborate on making great food. Let’s explore how engineering teams can implement them to whip up better software."
+    },
+    "id": "elise"
+  },
+  {
+    "name": "Elise Jakobsen",
+    "title": "VP of Engineering at ride.com",
+    "bio": "He leads a distributed team throughout the US and Latin America that is working to reinvent how people commute to work and take 1 million cars of the road.",
+    "talk": {
+      "title": "How Long On That Ticket?",
+      "subtitle": "Proven Recipes That Enhance Collaboration",
+      "text": "Programming can often feel like a solitarypursuit – it’s just you and your computer against the world – it’s easy to forget that you are working alongside a team of people to accomplish a project as a group. Professional cooks do this every day, sometimes twice a day with shorter timeframes to feed hungry patrons. In this talk, Juan Pablo & Patricia sauté their way through communication recipes used every night in the fast paced world of cooks and kitchens to support each other as they collaborate on making great food. Let’s explore how engineering teams can implement them to whip up better software."
+    },
+    "id": "elise"
+  }
+]
