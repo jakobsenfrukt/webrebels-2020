@@ -10,6 +10,7 @@
           <div v-else class="speaker-image_fallback"></div>
         </div>
         <div class="speaker-text">
+          <a class="schedule-time" href="/schedule">Monday 14th May at 10:30</a>
           <h3 class="speaker-name">{{ speaker.name }}</h3>
           <p class="speaker-title">{{ speaker.title }}</p>
           <p class="speaker-bio">{{ speaker.bio }}</p>
@@ -44,7 +45,7 @@ export default {
   display: flex;
   color: inherit;
   max-width: 50rem;
-  margin: 0 auto 2rem 0;
+  margin: 0 auto 6rem;
 
   &-image {
     width: 30%;
@@ -63,24 +64,73 @@ export default {
   }
   &-text {
     width: 70%;
+    p {
+      margin-left: 0;
+    }
   }
   &-name {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 0;
+    text-align: left;
   }
   &-title {
     margin-bottom: 1rem;
     font-family: $monospace;
   }
 
-  /*&:nth-child(even) {
-    margin: 0 0 2rem auto;
+  .schedule-time {
+    text-transform: uppercase;
+    font-family: $monospace;
+    display: block;
+    margin-bottom: .5rem;
+    color: $color-main;
+
+    &:hover {
+      color: $color-pink;
+    }
+  }
+}
+
+@media (max-width: $media-s) {
+  .speaker {
     .speaker-image {
       order: 2;
     }
     .speaker-text {
       order: 1;
     }
-  }*/
+  }
+}
+
+@media (min-width: $media-m) {
+  .speaker {
+    &:nth-child(even) {
+      .speaker-image {
+        order: 2;
+      }
+      .speaker-text {
+        order: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-l) {
+  .speaker-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .speaker {
+    width: 46%;
+
+    &:nth-child(even) {
+      .speaker-image {
+        order: 1;
+      }
+      .speaker-text {
+        order: 2;
+      }
+    }
+  }
 }
 </style>

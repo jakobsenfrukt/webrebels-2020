@@ -3,12 +3,14 @@
     <nav class="main-nav">
       <div class="logo">
         <a href="/"><Logo /></a>
+        <span class="dates">Oslo 14&mdash;15th May 2020</span>
       </div>
       <ul class="site-nav">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/schedule">Schedule</router-link></li>
         <li><router-link to="/speakers">Speakers</router-link></li>
         <li><router-link to="/about">About</router-link></li>
+        <li><span class="moon">&#9790;</span></li>
       </ul>
     </nav>
   </header>
@@ -33,27 +35,54 @@ export default {
 .main-nav {
   .logo {
     width: 12rem;
-    max-width: 60%;
+    max-width: 30%;
     position: fixed;
-    top: 1rem;
+    top: 3rem;
     right: -.8rem;
     z-index: 666;
+    padding-bottom: 1.2rem;
+
+    .dates {
+      font-family: $monospace;
+      font-size: $font-s;
+      text-transform: uppercase;
+      color: $color-main;
+      position: relative;
+      right: -.2rem;
+      text-align: right;
+    }
   }
 
   .site-nav {
     position: fixed;
     z-index: 666;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     list-style: none;
     margin: 0;
-    padding: 0 0 1rem 0;
+    padding: .3rem 1rem 0;
+    background: $color-black;
     transition: all .3s ease-in-out;
     text-align: center;
     width: 100%;
 
     li {
       display: inline-block;
-      margin-right: 1.6rem;
+      padding: 0 1rem;
+      text-align: center;
+
+      a {
+        color: $color-yellow;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .moon {
+        color: $color-yellow;
+        position: relative;
+        right: 0;
+      }
     }
   }
 

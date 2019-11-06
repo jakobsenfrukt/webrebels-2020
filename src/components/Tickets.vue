@@ -1,21 +1,33 @@
 <template>
-  <section class="tickets">
+  <a class="tickets" href="#">
     <h1>Get tickets</h1>
-  </section>
+  </a>
 </template>
 
 <style lang="scss" scoped>
 @import '@/css/variables.scss';
 .tickets {
-  background: rgb(253, 7, 232);
-  color: black;
-  border-radius: 6rem;
-  padding: 2rem 2rem 1rem;
+  display: block;
+  background: transparent;
+  border: 3px solid $color-pink;
+  border-radius: 6px;
+  color: $color-pink;
+  width: $width-plus;
+  max-width: 100%;
+  margin: 1rem auto 6rem;
+  font-size: 2rem;
+  padding: .6em 1em .36em;
+
+  &:hover {
+    box-shadow: 0 0 10px $color-pink, inset 0 0 10px $color-pink;
+    text-shadow: 0 0 5px $color-pink;
+  }
 
   h1 {
     margin: 0;
     line-height: 1;
-    font-size: 3rem;
+    font-size: inherit;
+    color: inherit;
   }
 }
 </style>

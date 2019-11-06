@@ -1,6 +1,7 @@
 <template>
   <section class="speakers index">
     <h2 class="speakers-heading">Speakers</h2>
+    <p class="lead">We’re putting the same effort and love into the conference and its line-up that you are used to from previous years.</p>
     <div class="speaker-list">
       <a v-for="(speaker, index) in speakers.slice(0,9)" :key="index" :href="`/speakers/#${speaker.id}`" class="speaker">
         <div class="speaker-image">
@@ -13,7 +14,8 @@
         </div>
       </a>
     </div>
-    <router-link to="/speakers" class="view-all button">Show all speakers</router-link>
+    <router-link to="/speakers" class="view-all button">All speakers</router-link>
+    <router-link to="/speakers" class="view-schedule button">View schedule</router-link>
   </section>
 </template>
 
@@ -33,7 +35,6 @@ export default {
 @import '@/css/variables.scss';
 .speakers {
   &-heading {
-    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 2rem;
@@ -41,34 +42,54 @@ export default {
 }
 .speaker-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 .speaker {
   color: inherit;
   width: 33.333333%;
-  margin: 0 auto 2rem 0;
+  margin: 0;
   position: relative;
   padding: 1rem;
+  text-align: center;
+
+  @media (min-width: $media-l) {
+    width: 25%;
+  }
+  @media (max-width: $media-m) {
+    width: 50%;
+  }
+  @media (max-width: $media-s) {
+    width: 100%;
+  }
+
+  &:hover {
+    .speaker-image img, .speaker-image_fallback {
+      box-shadow: 0 0 12px $color-yellow;
+    }
+  }
 
   &-image {
     padding: 1rem;
     img {
       border-radius: 50%;
+      transition: all 0.2s ease-in-out;
     }
     &_fallback {
-      background: $color-main;
+      background: $color-yellow;
       width: 100%;
       padding-top: 100%;
       border-radius: 50%;
+      transition: all 0.2s ease-in-out;
     }
   }
   &-name {
+    display: inline-block;
     font-size: 1.8rem;
     margin-bottom: 0;
-    text-align: center;
-    margin: -4rem auto 1.4rem;
+    position: relative;
+    top: -5rem;
     background: $color-main;
     color: black;
     padding: .4rem .8rem;
@@ -81,7 +102,7 @@ export default {
     margin: auto;
   }
   &-title {
-    margin-bottom: 1rem;
+    margin: -3rem auto 0;
     font-family: $monospace;
     line-height: 1.3rem;
     text-align: center;

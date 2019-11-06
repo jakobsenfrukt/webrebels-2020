@@ -7,14 +7,16 @@ html {
 
 body {
 	margin: 0;
-  padding: 0;
+  padding: 2rem 0 0;
   min-height: 100%;
   color: $color-text;
   background: $color-background;
   background-attachment: fixed;
 
   font-family: $sans-serif;
+  font-weight: 500;
   line-height: 1.4;
+  letter-spacing: .02em;
 
   position: relative;
 
@@ -26,13 +28,20 @@ body {
       outline-color: $color-main;
     }
   }
+
+  @media screen and (prefers-color-scheme: light) {
+    background: $color-white;
+    color: $color-black;
+  }
 }
 
 main {
   padding: 2rem 3rem 8rem;
+  position: relative;
+  z-index: 100;
 
-  @media (max-width: $sm) {
-    padding: 4rem 2rem;
+  @media (max-width: $media-s) {
+    padding: 2rem 1rem;
   }
 }
 
@@ -46,31 +55,66 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
+  font-weight: 800;
+  text-align: center;
+}
+
+.simple-page {
+  h1, h2, h3, h4, h5, h6 {
+    max-width: $width-p;
+    text-align: left;
+    margin: 0 auto 1rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 6rem;
+  }
+  h1 {
+    &.page-title {
+      margin: 4rem auto 3rem;
+      text-align: center;
+    }
+  }
+  p {
+    &.lead {
+      max-width: $width-lead;
+    }
+  }
+  a {
+    color: $color-green;
+    &:nth-child(2n+1) {
+      color: $color-pink;
+    }
+    &:nth-child(3n+1) {
+      color: $color-yellow;
+    }
+  }
+  ul {
+    max-width: $width-p;
+    margin: 0 auto;
+  }
 }
 
 h1 {
   font-size: 5rem;
 
   &.page-title {
-    margin: 2rem auto 3rem 0;
+    margin: 4rem auto 3rem 0;
   }
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 
   &.subtitle {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: normal;
     font-family: $monospace;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -79,6 +123,7 @@ h3 {
 }
 
 a {
+  color: $color-main;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -93,10 +138,10 @@ p {
   position: relative;
 
   &.lead {
-    font-size: 1.46rem;
-    line-height: 1.36;
-    margin-bottom: 3.24rem;
-    max-width: 36rem;
+    font-family: $monospace;
+    font-size: 1.2rem;
+    margin-bottom: 6rem;
+    text-align: center;
   }
   a {
     color: $color-link;
@@ -104,6 +149,21 @@ p {
 }
 
 .button {
-  background: $color-main;
-  padding: 1rem 2rem;
+  display: block;
+  text-align: center;
+  background: $color-pink;
+  color: $color-black;
+  width: $width-plus;
+  max-width: 100%;
+  margin: 1rem auto;
+  font-size: 1rem;
+  font-family: $monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: .6em 1em .36em;
+
+  &:hover {
+    box-shadow: 0 0 10px $color-pink;
+    color: $color-black;
+  }
 }
