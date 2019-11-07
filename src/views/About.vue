@@ -1,7 +1,9 @@
 <template>
   <main class="simple-page about">
-    <h1 class="page-title">About</h1>
-    <p class="lead">The Web Rebels conference is a JavaScript conference and we are proud members of the <a href="https://jsconf.com/">JSConf family of events</a>. We are a conference for developers who love building applications and services using web technology.</p>
+    <div class="hero">
+      <h1 class="page-title">About</h1>
+      <p class="lead">The Web Rebels conference is a JavaScript conference and we are proud members of the <a href="https://jsconf.com/">JSConf family of events</a>. We are a conference for developers who love building applications and services using web technology.</p>
+    </div>
     <h2>For the community, not for profit</h2>
     <p>We are a <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=997686659">registered not-for-profit organization</a> that is run by unpaid volunteers. If we make any profit from the conference we give 30% back to community groups throughout the Nordic region. Any questions you might have: <a href="mailto:boyhowdy@webrebels.org" target="_blank">shoot us an email</a> or find us on <a href="https://twitter.com/web_rebels/">Twitter</a>.
     <p>We invite <a href="/speakers">16 speakers</a>. We do not have a CFP and our <a href="/policies">policy</a> is that speakers at the conference get paid for their travel and accommodation. We do not sell speaker slots and we do not accept sales pitches masked as presentations.</p>

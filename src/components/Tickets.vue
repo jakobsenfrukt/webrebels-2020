@@ -1,5 +1,5 @@
 <template>
-  <a class="tickets" href="#">
+  <a class="tickets button" href="#">
     <h1>Get tickets</h1>
   </a>
 </template>
@@ -10,7 +10,6 @@
   display: block;
   background: transparent;
   border: 3px solid $color-pink;
-  border-radius: 6px;
   color: $color-pink;
   width: $width-plus;
   max-width: 100%;
@@ -28,6 +27,13 @@
     line-height: 1;
     font-size: inherit;
     color: inherit;
+  }
+
+  @media screen and (prefers-color-scheme: light) {
+    &:hover {
+      box-shadow: 0 0 4px $color-pink, inset 0 0 4px $color-pink;
+      text-shadow: 0 0 2px $color-pink;
+    }
   }
 }
 </style>

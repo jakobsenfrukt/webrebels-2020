@@ -8,7 +8,7 @@
           <img v-if="speaker.image" :src="speaker.image" />
           <div v-else class="speaker-image_fallback"></div>
         </div>
-        <h3 class="speaker-name">{{ speaker.name }}</h3>
+        <h3 class="speaker-name"><span>{{ speaker.name }}</span></h3>
         <div class="speaker-text">
           <p class="speaker-title">{{ speaker.title }}</p>
         </div>
@@ -54,6 +54,8 @@ export default {
   padding: 1rem;
   text-align: center;
 
+  perspective: 700px;
+
   @media (min-width: $media-l) {
     width: 25%;
   }
@@ -72,6 +74,8 @@ export default {
 
   &-image {
     padding: 1rem;
+    max-width: 20rem;
+    margin: 0 auto;
     img {
       border-radius: 50%;
       transition: all 0.2s ease-in-out;
@@ -85,17 +89,22 @@ export default {
     }
   }
   &-name {
-    display: inline-block;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     margin-bottom: 0;
     position: relative;
-    top: -5rem;
-    background: $color-main;
-    color: black;
-    padding: .4rem .8rem;
+    top: -4rem;
+    font-weight: 800;
+    padding: .5rem .8rem .1rem;
+    line-height: 1.56;
 
     transform-origin: center;
-    transform: rotate(-5deg);
+    transform: rotateX(-2deg) rotateY(20deg);
+
+    span {
+      background: $color-black;
+      color: $color-main;
+      box-shadow: -.4rem 0 0 .4rem $color-black, .4rem 0 0 .4rem $color-black;
+    }
   }
   &-text {
     width: 80%;
@@ -106,6 +115,25 @@ export default {
     font-family: $monospace;
     line-height: 1.3rem;
     text-align: center;
+  }
+}
+.speaker:nth-child(odd) {
+  .speaker-name {
+    transform: rotateX(20deg) rotateY(-20deg);
+  }
+}
+.speaker:nth-child(even) {
+  .speaker-name {
+    transform: rotateX(-2deg) rotateY(20deg);
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  .speaker-name {
+    span {
+      background: $color-main;
+      color: $color-black;
+      box-shadow: -.4rem 0 0 .4rem $color-main, .4rem 0 0 .4rem $color-main;
+    }
   }
 }
 </style>

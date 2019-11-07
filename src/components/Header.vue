@@ -51,6 +51,12 @@ export default {
       right: -.2rem;
       text-align: right;
     }
+    
+    @media screen and (prefers-color-scheme: light) {
+      .dates {
+        color: $color-black;
+      }
+    }
   }
 
   .site-nav {
@@ -83,6 +89,10 @@ export default {
         position: relative;
         right: 0;
       }
+    }
+
+    @media screen and (prefers-color-scheme: light) {
+      background: linear-gradient(45deg, $color-purple, $color-orange);
     }
   }
 

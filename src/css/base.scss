@@ -101,9 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 5rem;
-
   &.page-title {
-    margin: 4rem auto 3rem 0;
+    margin-top: 4rem;
   }
 }
 
@@ -140,7 +139,6 @@ p {
   &.lead {
     font-family: $monospace;
     font-size: 1.2rem;
-    margin-bottom: 6rem;
     text-align: center;
   }
   a {
@@ -166,4 +164,19 @@ p {
     box-shadow: 0 0 10px $color-pink;
     color: $color-black;
   }
+
+  @media screen and (prefers-color-scheme: light) {
+    &:hover {
+      box-shadow: 0 0 4px $color-pink;
+      color: $color-black;
+    }
+  }
+}
+
+.hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

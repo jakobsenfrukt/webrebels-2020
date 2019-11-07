@@ -1,13 +1,14 @@
 <template>
   <footer class="site-footer">
+    <Newsletter />
     <section class="some">
-      REMEMBER TO FIND, FOLLOW, TRACK, LIKE &amp; LOVE US ELSEWHERE
+      <p>Remember to find, follow, track, like &amp; love us elsewhere</p>
       <a href="https://twitter.com/web_rebels">Twitter</a>
       <a href="https://www.youtube.com/channel/UCM9cTs_C0PmTlHXTNrqTpnw">YouTube</a>
     </section>
     <nav class="footer-nav">
+      <div></div>
       <div class="previous-years">
-        <p>Check out previous years:</p>
         <a href="https://2012.webrebels.org/">2012</a>
         <a href="https://2013.webrebels.org/">2013</a>
         <a href="https://2014.webrebels.org/">2014</a>
@@ -24,7 +25,12 @@
 </template>
 
 <script>
+import Newsletter from '@/components/Newsletter.vue'
+
 export default {
+  components: {
+    Newsletter
+  },
   props: {
     text: String
   }
@@ -45,17 +51,35 @@ export default {
     max-width: none;
   }
 }
+.some {
+  text-align: center;
+  display: flex;
+  align-items: space-between;
+  flex-wrap: wrap;
+
+  p {
+    width: 100%;
+  }
+  a {
+    display: inline-block;
+    margin: 2rem auto;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    border-bottom: .2rem solid $color-main;
+  }
+}
 .footer-nav {
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
   font-family: $monospace;
   padding: .25rem 1rem;
   background: $color-black;
+  display: flex;
+  justify-content: space-between;
 
   p {
     margin: 0;
@@ -70,8 +94,20 @@ export default {
     color: $color-yellow;
   }
 
+  .previous-years {
+    text-align: center;
+  }
+
   .to-top {
     color: $color-white;
+    margin: 0;
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  .footer-nav {
+    p {
+      color: $color-white;
+    }
   }
 }
 </style>

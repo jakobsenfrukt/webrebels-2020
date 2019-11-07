@@ -69,4 +69,10 @@
     }
   }
 }
+
+@media screen and (prefers-color-scheme: light) {
+  .friend-logo {
+    filter: none;
+  }
+}
 </style>

@@ -1,8 +1,10 @@
 <template>
   <main class="speakers">
-    <h1 class="page-title">Speakers</h1>
-    <p class="lead">As usual we have a bunch of cool speakers joining us from all over the world!</p> 
-    <Tickets />
+    <div class="hero">
+      <h1 class="page-title">Speakers</h1>
+      <p class="lead">As usual we have a bunch of cool speakers joining us from all over the world!</p> 
+      <Tickets />
+    </div>
     <div class="speaker-list">
       <div v-for="(speaker, index) in speakers" :key="index" :id="speaker.id" class="speaker">
         <div class="speaker-image">
@@ -14,6 +16,14 @@
           <h3 class="speaker-name">{{ speaker.name }}</h3>
           <p class="speaker-title">{{ speaker.title }}</p>
           <p class="speaker-bio">{{ speaker.bio }}</p>
+        </div>
+        <div class="read-more">
+          <div class="header">
+            <span class="suptitle">Juan Pablo will talk about</span>
+            <h3 class="talk-title">DevTools for the Progressive Web</h3>
+          </div>
+          <div class="content">
+          </div>
         </div>
       </div>
     </div>
@@ -43,9 +53,14 @@ export default {
 }
 .speaker {
   display: flex;
+  flex-wrap: wrap;
   color: inherit;
   max-width: 50rem;
   margin: 0 auto 6rem;
+  padding-top: 5rem;
+  &:first-child {
+    padding-top: 0;
+  }
 
   &-image {
     width: 30%;
@@ -56,7 +71,7 @@ export default {
     }
 
     &_fallback {
-      background: $color-main;
+      background: $color-teal;
       width: 100%;
       padding-top: 100%;
       border-radius: 50%;
@@ -81,23 +96,103 @@ export default {
   .schedule-time {
     text-transform: uppercase;
     font-family: $monospace;
-    display: block;
-    margin-bottom: .5rem;
+    display: inline-block;
     color: $color-main;
+    background: $color-black;
+    padding: .2rem .8rem 0;
+    margin-bottom: 1rem;
 
     &:hover {
       color: $color-pink;
+    }
+  }
+
+  .read-more {
+    width: 100%;
+    color: $color-white;
+    border-bottom: 2px solid $color-pink;
+    padding-top: 2rem;
+    order: 3 !important;
+  }
+  .header {
+    transition: all .2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $color-main;
+    }
+  }
+  .suptitle {
+    font-family: $monospace;
+    display: block;
+    margin-bottom: .5rem;
+    color: $color-pink;
+  }
+
+  .talk-title {
+    text-align: left;
+    font-size: 1.8rem;
+
+    &:after {
+      content: "↓";
+      font-family: $monospace;
+      display: inline-block;
+      float: right;
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .speaker {
+    .schedule-time {
+      background: $color-yellow;
+      color: $color-black;
+    }
+    .read-more {
+      color: $color-black;
+      border-color: $color-pink;
+    }
+    .suptitle {
+      color: $color-pink;
+    }
+  }
+}
+
+@media (max-width: $media-m) {
+  .speaker {
+    .speaker-image {
+      order: 2;
+      width: 50%;
+      padding-right: 0;
+      padding-left: 2rem;
+    }
+    .speaker-text {
+      order: 1;
+      width: 50%;
     }
   }
 }
 
 @media (max-width: $media-s) {
   .speaker {
+    display: block;
+    padding: 0 1rem;
+    text-align: center;
     .speaker-image {
-      order: 2;
+      width: 60%;
+      margin: 0 auto;
     }
     .speaker-text {
-      order: 1;
+      width: 100%;
+    }
+    .schedule-time, .speaker-name, .speaker-title {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p {
+      text-align: left;
+      width: 80%;
+      margin: 0 auto 1.5rem;
     }
   }
 }
@@ -110,25 +205,6 @@ export default {
       }
       .speaker-text {
         order: 1;
-      }
-    }
-  }
-}
-
-@media (min-width: $media-l) {
-  .speaker-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .speaker {
-    width: 46%;
-
-    &:nth-child(even) {
-      .speaker-image {
-        order: 1;
-      }
-      .speaker-text {
-        order: 2;
       }
     }
   }

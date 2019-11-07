@@ -1,8 +1,10 @@
 <template>
   <main class="schedule-page">
-    <h1 class="page-title">Schedule</h1>
-    <p class="lead">Check out this awesome schedule.</p>
-    <Tickets />
+    <div class="hero">
+      <h1 class="page-title">Schedule</h1>
+      <p class="lead">Check out this awesome schedule.</p>
+      <Tickets />
+    </div>
     <div class="schedule">
       <div class="schedule-day day1">
         <h2 class="schedule-title">Thursday May 14th</h2>

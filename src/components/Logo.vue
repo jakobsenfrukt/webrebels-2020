@@ -41,4 +41,15 @@ svg {
 #letters path {
   fill: $color-black;
 }
+@media screen and (prefers-color-scheme: light) {
+  #banner-bg path {
+    fill: $color-black;
+  }
+  #banner path {
+    fill: $color-black;
+  }
+  #letters path {
+    fill: $color-main;
+  }
+}
 </style>
