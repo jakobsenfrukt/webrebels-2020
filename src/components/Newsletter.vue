@@ -90,7 +90,7 @@ export default {
     border: none;
 
     &:hover, &:focus {
-      box-shadow: 0 0 0 2px $color-main;
+      box-shadow: 0 0 10px $color-main;
       outline: none;
     }
   }
@@ -99,6 +99,7 @@ export default {
   font-family: $monospace;
   width: $width-p;
   max-width: 100%;
-  margin: .5rem auto;
+  margin: 1rem auto;
+  cursor: pointer;
 }
 </style>
