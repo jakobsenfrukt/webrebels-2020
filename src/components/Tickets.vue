@@ -15,7 +15,7 @@
   max-width: 100%;
   margin: 1rem auto 6rem;
   font-size: 2rem;
-  padding: .6em 1em .36em;
+  padding: .6em 1em;
 
   &:hover {
     box-shadow: 0 0 10px $color-pink, inset 0 0 10px $color-pink;
