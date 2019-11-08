@@ -16,13 +16,22 @@
           <h3 class="speaker-name">{{ speaker.name }}</h3>
           <p class="speaker-title">{{ speaker.title }}</p>
           <p class="speaker-bio">{{ speaker.bio }}</p>
+          <p class="speaker-some">
+            <span class="some-item">Twitter: <a href="#">@juanpablo</a></span>
+            <span class="some-item">Github: <a href="#">@juanpablo</a></span>
+            <span class="some-item">Website: <a href="#">juanpabloboi.com</a></span>
+          </p>
         </div>
-        <div class="read-more">
+        <div class="read-more" :class="{ open: open }" @click="open = !open">
           <div class="header">
             <span class="suptitle">Juan Pablo will talk about</span>
             <h3 class="talk-title">DevTools for the Progressive Web</h3>
           </div>
           <div class="content">
+            <p>Usually, after wrapping up the conference, we secure our venue for the following year straight away. This time however, we ran into an unexpected challenge: none of the dates available worked for us.</p>
+            <p>We went looking for alternatives but ultimately, nothing fit what we were looking for. When you run a conference, you always work within certain constraints, and this time, we couldn’t make it work.</p>
+            <p>As a consequence, there will be no Web Rebels in 2019. You may have guessed this already.</p>
+            <p>The good news is that we have the dates and the venue we want for 2020.</p>
           </div>
         </div>
       </div>
@@ -40,7 +49,8 @@ export default {
   },
   data: function() {
     return {
-      speakers
+      speakers,
+      open: false
     }
   }
 }
@@ -93,6 +103,16 @@ export default {
     font-family: $monospace;
   }
 
+  &-some {
+    font-family: $monospace;
+    font-size: $font-s;
+
+    .some-item {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+
   .schedule-time {
     text-transform: uppercase;
     font-family: $monospace;
@@ -110,15 +130,44 @@ export default {
   .read-more {
     width: 100%;
     color: $color-white;
-    border-bottom: 2px solid $color-pink;
     padding-top: 2rem;
     order: 3 !important;
+
+    .content {
+      display: none;
+    }
+    &.open {
+      .content {
+       display: block;
+      }
+
+      .talk-title {
+        &:after {
+          content: "×";
+        }
+      }
+    }
   }
   .header {
     transition: all .2s ease-in-out;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    &:after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: $color-pink;
+    }
     &:hover {
-      cursor: pointer;
-      color: $color-main;
+      color: $color-pink;
+      text-shadow: 0 0 5px $color-pink;
+      &:after {
+        box-shadow: 0 0 10px $color-pink;
+      }
+      .talk-title {
+        color: $color-white;
+      }
     }
   }
   .suptitle {
@@ -131,11 +180,11 @@ export default {
   .talk-title {
     text-align: left;
     font-size: 1.8rem;
+    color: $color-white;
 
     &:after {
       content: "↓";
       font-family: $monospace;
-      display: inline-block;
       float: right;
     }
   }
@@ -179,7 +228,8 @@ export default {
     text-align: center;
     .speaker-image {
       width: 60%;
-      margin: 0 auto;
+      margin: 0 auto -1.5rem;
+      padding: 0;
     }
     .speaker-text {
       width: 100%;
@@ -189,10 +239,24 @@ export default {
       margin-left: auto;
       margin-right: auto;
     }
+    .speaker-name {
+      font-size: 2rem;
+    }
+    .talk-title {
+      font-size: 1.5rem;
+      text-align: center;
+      &:after {
+        display: block;
+        float: none;
+        margin-top: .5rem;
+      }
+    }
     p {
       text-align: left;
-      width: 80%;
       margin: 0 auto 1.5rem;
+    }
+    .read-more .content p {
+      width: 90%;
     }
   }
 }

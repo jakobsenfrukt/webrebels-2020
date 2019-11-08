@@ -67,7 +67,7 @@ export default {
     right: 0;
     list-style: none;
     margin: 0;
-    padding: .3rem 1rem 0;
+    padding: .6rem 1rem .3rem;
     background: $color-black;
     transition: all .3s ease-in-out;
     text-align: center;

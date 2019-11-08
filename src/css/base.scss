@@ -159,10 +159,11 @@ p {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: .6em 1em .36em;
+  border: none;
 
   &:hover {
     box-shadow: 0 0 10px $color-pink;
-    color: $color-black;
+    color: $color-white;
   }
 
   @media screen and (prefers-color-scheme: light) {
@@ -179,4 +180,10 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  a {
+    color: $color-blue;
+  }
 }

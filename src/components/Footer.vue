@@ -2,7 +2,6 @@
   <footer class="site-footer">
     <Newsletter />
     <section class="some">
-      <p>Remember to find, follow, track, like &amp; love us elsewhere</p>
       <a href="https://twitter.com/web_rebels">Twitter</a>
       <a href="https://www.youtube.com/channel/UCM9cTs_C0PmTlHXTNrqTpnw">YouTube</a>
     </section>
@@ -40,12 +39,7 @@ export default {
 <style scoped lang="scss">
 @import '@/css/variables.scss';
 .site-footer {
-  padding: 6rem 3rem 12rem;
   position: relative;
-
-  @media (max-width: $media-s) {
-    padding:  3rem 1rem 1rem;
-  }
 
   p {
     max-width: none;
@@ -56,6 +50,8 @@ export default {
   display: flex;
   align-items: space-between;
   flex-wrap: wrap;
+  max-width: $width-plus;
+  margin: 0 auto 5rem;
 
   p {
     width: 100%;
@@ -70,22 +66,11 @@ export default {
   }
 }
 .footer-nav {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
+  position: relative;
   font-family: $monospace;
-  padding: .25rem 1rem;
+  padding: .6rem 1rem .3rem;
   background: $color-black;
-  display: flex;
-  justify-content: space-between;
-
-  p {
-    margin: 0;
-    display: inline-block;
-    margin-right: 1rem;
-  }
+  width: 100%;
 
   a {
     display: inline-block;
@@ -101,6 +86,15 @@ export default {
   .to-top {
     color: $color-white;
     margin: 0;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    @media (max-width: $media-s) {
+      position: static;
+      display: block;
+      text-align: center;
+      margin: 1rem 0;
+    }
   }
 }
 @media screen and (prefers-color-scheme: light) {
