@@ -7,7 +7,7 @@
         <div id="mc_embed_signup_scroll">
           <div class="mc-field-group">
             <label for="mce-EMAIL">Email</label>
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="hi@example.pizza">
           </div>
           <div id="mce-responses" class="clear">
             <div class="response" id="mce-error-response" style="display:none"></div>
@@ -87,7 +87,9 @@ export default {
   .email {
     width: 100%;
     margin: 0;
+    padding: 1rem;
     border: none;
+    font-family: $monospace;
 
     &:hover, &:focus {
       box-shadow: 0 0 10px $color-main;
@@ -101,5 +103,17 @@ export default {
   max-width: 100%;
   margin: 1rem auto;
   cursor: pointer;
+}
+@media screen and (prefers-color-scheme: light) {
+  .newsletter {
+    background: transparent;
+    box-shadow: 0 0 0 2px $color-black;
+    color: $color-black;
+  }
+  .mc-field-group {
+    .email {
+      border: 2px solid $color-black;
+    }
+  }
 }
 </style>

@@ -186,4 +186,15 @@ p {
   a {
     color: $color-blue;
   }
+  .simple-page {
+    a {
+      color: $color-blue;
+      &:nth-child(2n+1) {
+        color: $color-pink;
+      }
+      &:nth-child(3n+1) {
+        color: $color-purple;
+      }
+    }
+  }
 }

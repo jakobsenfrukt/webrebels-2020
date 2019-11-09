@@ -19,6 +19,7 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/css/variables.scss';
 .oslo {
   position: fixed;
   bottom: 0;
@@ -32,6 +33,11 @@
   }
   @media screen and (prefers-color-scheme: light) {
     opacity: .2;
+  }
+  @media (max-width: $media-s) {
+    svg {
+      width: 150%;
+    }
   }
 }
 </style>

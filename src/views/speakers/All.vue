@@ -200,8 +200,29 @@ export default {
       color: $color-black;
       border-color: $color-pink;
     }
+    .header {
+      &:hover {
+        text-shadow: 0 0 2px $color-pink;
+        &:after {
+          box-shadow: 0 0 5px $color-pink;
+        }
+        .talk-title {
+          color: $color-black;
+        }
+      }
+    }
     .suptitle {
       color: $color-pink;
+    }
+
+    .talk-title {
+      color: $color-black;
+    }
+
+    &-some {
+      .some-item a {
+        color: $color-blue;
+      }
     }
   }
 }

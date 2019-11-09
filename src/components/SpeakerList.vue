@@ -14,8 +14,10 @@
         </div>
       </a>
     </div>
-    <router-link to="/speakers" class="view-all button">All speakers</router-link>
-    <router-link to="/speakers" class="view-schedule button">View schedule</router-link>
+    <div class="buttonbox">
+      <router-link to="/speakers" class="view-all button">All speakers</router-link>
+      <router-link to="/speakers" class="view-schedule button">View schedule</router-link>
+    </div>
   </section>
 </template>
 
@@ -68,7 +70,10 @@ export default {
 
   &:hover {
     .speaker-image img, .speaker-image_fallback {
-      box-shadow: 0 0 12px $color-yellow;
+      box-shadow: 0 0 .8rem rgba(255, 255, 255, .3);
+    }
+    .speaker-name span {
+      color: $color-white;
     }
   }
 
@@ -104,6 +109,7 @@ export default {
       background: $color-black;
       color: $color-main;
       box-shadow: -.4rem 0 0 .4rem $color-black, .4rem 0 0 .4rem $color-black;
+      transition: all .2s ease-in-out;
     }
   }
   &-text {
@@ -125,6 +131,15 @@ export default {
 .speaker:nth-child(even) {
   .speaker-name {
     transform: rotateX(-2deg) rotateY(20deg);
+  }
+}
+.buttonbox {
+  display: flex;
+  max-width: $width-lead;
+  margin: 2rem auto;
+
+  .button {
+    margin: .5rem .5rem;
   }
 }
 @media screen and (prefers-color-scheme: light) {

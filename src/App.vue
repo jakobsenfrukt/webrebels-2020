@@ -4,6 +4,7 @@
     <Header />
     <transition name="fade"><router-view/></transition>
     <Footer />
+    <Smu />
   </div>
 </template>
 
@@ -11,12 +12,14 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Oslo from '@/components/graphics/Oslo.vue'
+import Smu from '@/components/graphics/Smu.vue'
 
 export default {
   components: {
     Header,
     Footer,
-    Oslo
+    Oslo,
+    Smu
   }
 }
 </script>

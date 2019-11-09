@@ -28,10 +28,11 @@
 <style lang="scss" scoped>
 @import '@/css/variables.scss';
 .friends {
+  padding: 5rem 0;
   &-heading {
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
   }
 }
 .friend-list {

@@ -5,10 +5,14 @@
         <a href="/"><Logo /></a>
         <span class="dates">Oslo 14&mdash;15th May 2020</span>
       </div>
-      <ul class="site-nav">
+      <ul class="site-nav" :class="{open: open}">
+        <li class="menu-toggle" @click="open = !open">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="3" y1="12" x2="24" y2="12"></line><line x1="3" y1="6" x2="24" y2="6"></line><line x1="3" y1="18" x2="24" y2="18"></line></svg>
+        </li>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/schedule">Schedule</router-link></li>
         <li><router-link to="/speakers">Speakers</router-link></li>
+        <li><router-link to="/info">Info</router-link></li>
         <li><router-link to="/about">About</router-link></li>
         <li><span class="moon">&#9790;</span></li>
       </ul>
@@ -22,6 +26,11 @@ import Logo from '@/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data: function() {
+    return {
+      open: false
+    }
   }
 }
 </script>
@@ -57,6 +66,9 @@ export default {
         color: $color-black;
       }
     }
+    @media (max-width: $media-s) {
+      position: absolute;
+    }
   }
 
   .site-nav {
@@ -91,8 +103,37 @@ export default {
       }
     }
 
+    .menu-toggle {
+      display: none;
+
+      svg {
+        width: 1em;
+        height: 1em;
+      }
+    }
+
     @media screen and (prefers-color-scheme: light) {
       background: linear-gradient(45deg, $color-purple, $color-orange);
+    }
+
+    @media (max-width: $media-s) {
+      li {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+
+      &.open {
+        li {
+          display: block;
+          margin: 2rem auto;
+        }
+        .menu-toggle {
+          margin: 0 auto 5rem;
+        }
+      }
     }
   }
 
