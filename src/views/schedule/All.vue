@@ -5,8 +5,9 @@
       <p class="lead">Check out this awesome schedule.</p>
       <Tickets />
     </div>
+    <div class="jump"><a href="#friday">Jump to Friday</a></div>
     <div class="schedule">
-      <div class="schedule-day day1">
+      <div class="schedule-day day1" id="thursday">
         <h2 class="schedule-title">Thursday May 14th</h2>
         <div class="contents-wrapper">
           <div class="contents">
@@ -103,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="schedule-day day1">
+      <div class="schedule-day day2" id="friday">
         <h2 class="schedule-title">Friday May 15th</h2>
         <div class="contents-wrapper">
           <div class="contents">
@@ -277,6 +278,24 @@ export default {
       .event-title {
         color: $color-pink;
       }
+    }
+  }
+}
+.jump {
+  font-size: $font-s;
+  margin-bottom: 2rem;
+  text-align: right;
+
+  display: none;
+}
+@media (max-width: $media-s) {
+  .jump {
+    display: block;
+  }
+  .schedule-day {
+    margin-bottom: 4rem;
+    h2 {
+      font-size: 2rem;
     }
   }
 }
