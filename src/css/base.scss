@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .simple-page {
-  h1, h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
     max-width: $width-p;
     text-align: left;
     margin: 0 auto 1rem;
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
       max-width: $width-lead;
     }
   }
-  a {
+  p a {
     color: $color-green;
     &:nth-child(2n+1) {
       color: $color-pink;

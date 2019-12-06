@@ -104,6 +104,11 @@ export default {
   margin: 1rem auto;
   cursor: pointer;
 }
+@media (max-width: $media-s) {
+  .newsletter {
+    width: 94%;
+  }
+}
 @media screen and (prefers-color-scheme: light) {
   .newsletter {
     background: transparent;

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <a class="tickets button" href="#">
-      <h1>Get tickets</h1>
+  <a class="tickets button" href="#">
+    <h1>Get tickets</h1>
+    <div class="tickets-details">
       <p>
         Earlybird price!<br />
         happy times!
@@ -10,8 +10,8 @@
         info about tickets<br />
         price........5000kr
       </p>
-    </a>
-  </div>
+    </div>
+  </a>
 </template>
 
 <style lang="scss" scoped>
@@ -27,10 +27,6 @@
   font-size: 2rem;
   padding: 1.2rem 1.5rem 1rem;
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
   &:hover {
     box-shadow: 0 0 10px $color-pink, inset 0 0 10px $color-pink;
     text-shadow: 0 0 5px $color-pink;
@@ -42,6 +38,12 @@
     font-size: inherit;
     color: inherit;
     width: 100%;
+  }
+
+  .tickets-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   p {
@@ -62,7 +64,10 @@
   }
   @media (max-width: $media-s) {
     width: 100%;
-    display: block;
+
+    .tickets-details {
+      display: none;
+    }
 
     p {
       width: 100%;
