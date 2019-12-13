@@ -1,16 +1,6 @@
 <template>
   <a class="tickets button" href="#">
     <h1>Get tickets</h1>
-    <div class="tickets-details">
-      <p>
-        Earlybird price!<br />
-        happy times!
-      </p>
-      <p>
-        info about tickets<br />
-        price........5000kr
-      </p>
-    </div>
   </a>
 </template>
 
@@ -24,7 +14,6 @@
   width: $width-plus;
   max-width: 100%;
   margin: 1rem auto 6rem;
-  font-size: 2rem;
   padding: 1.2rem 1.5rem 1rem;
 
   &:hover {
@@ -35,25 +24,9 @@
   h1 {
     margin: 0;
     line-height: 1;
-    font-size: inherit;
+    font-size: 2rem;
     color: inherit;
     width: 100%;
-  }
-
-  .tickets-details {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  p {
-    font-size: 1rem;
-    margin: 2rem 0 0;
-    text-align: left;
-    text-transform: none;
-    width: 50%;
-    padding-right: 1.5rem;
-    line-height: 1.2;
   }
 
   @media screen and (prefers-color-scheme: light) {
@@ -65,12 +38,8 @@
   @media (max-width: $media-s) {
     width: 100%;
 
-    .tickets-details {
-      display: none;
-    }
-
-    p {
-      width: 100%;
+    h1 {
+      font-size: 1.4rem;
     }
   }
 }

@@ -237,6 +237,7 @@ export default {
     margin-bottom: 1rem;
 
     .when {
+      font-size: 1.2rem;
       width: 6rem;
       padding-right: 1rem;
       font-family: $monospace;
@@ -295,7 +296,7 @@ export default {
   .schedule-day {
     margin-bottom: 4rem;
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 }

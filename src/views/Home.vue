@@ -8,10 +8,10 @@
         <h2 class="index-subtitle subtitle">Join us in Oslo on 14th and 15th May</h2>
         <Tickets />
       </section>
-      <!--div class="hero-image">
+      <!--<div class="hero-image">
         <img src="https://2018.webrebels.org/static/webrebelBIG.759f990b.jpg" />
         <h1 class="hero-image-heading"><span class="heading-top">Class of Web Rebels 2020</span><span class="heading-bottom">we love you!</span></h1>
-      </div-->
+      </div>-->
       <SpeakerList />
       <SponsorList />
     </main>
@@ -37,7 +37,7 @@ export default {
 @import '../css/variables.scss';
 .intro {
   font-family: $monospace;
-  margin: 0 0 6rem;
+  margin: 0 0 4rem;
   width: $width-p;
   max-width: 70%;
   color: $color-white;
@@ -50,7 +50,7 @@ export default {
   font-weight: 400;
 }
 .hero {
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +82,11 @@ export default {
       display: block;
       background: $color-black;
     }
+  }
+}
+@media (max-width: $media-s) {
+  .index-title {
+    font-size: 3.4rem;
   }
 }
 @media screen and (prefers-color-scheme: light) {

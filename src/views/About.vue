@@ -12,12 +12,12 @@
     <h2>Rebel Crew</h2>
     <p>The volunteers working to bring you the 5th Web Rebels Conference are:</p>
     <ul>
-      <li>Alexandra Leisse (@troubalex)</li>
-      <li>Anders Olsen Sandvik (@Andersos)</li>
-      <li>Bodil Stokke (@bodil)</li>
-      <li>Espen Dalløkken (@leftieFriele)</li>
-      <li>Richard Walker (@digitalsadhu)</li>
-      <li>Trygve Lie (@trygve-lie)</li>
+      <li>Alexandra Leisse (<a href="#">@troubalex</a>)</li>
+      <li>Anders Olsen Sandvik (<a href="#">@Andersos</a>)</li>
+      <li>Bodil Stokke (<a href="#">@bodil</a>)</li>
+      <li>Espen Dalløkken (<a href="#">@leftieFriele</a>)</li>
+      <li>Richard Walker (<a href="#">@digitalsadhu</a>)</li>
+      <li>Trygve Lie (<a href="#">@trygve-lie</a>)</li>
     </ul>
     <section>
       <h2>What happened to Web Rebels 2019?</h2>
