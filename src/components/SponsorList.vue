@@ -1,6 +1,6 @@
 <template>
   <section class="friends index">
-    <h2 class="friends-heading">Sponsors</h2>
+    <h2 class="section-heading">Sponsors</h2>
     <div class="friend-list">
       <a href="#" class="friend">
         <img class="friend-logo" src="https://2017.webrebels.org/files/acando.svg" />
@@ -29,11 +29,6 @@
 @import '@/css/variables.scss';
 .friends {
   padding: 5rem 0;
-  &-heading {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: .5rem;
-  }
 }
 .friend-list {
   display: flex;
@@ -72,6 +67,11 @@
 }
 
 @media screen and (prefers-color-scheme: light) {
+  .friend-logo {
+    filter: none;
+  }
+}
+.light-theme {
   .friend-logo {
     filter: none;
   }

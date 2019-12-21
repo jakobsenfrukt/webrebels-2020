@@ -13,7 +13,7 @@
   color: $color-pink;
   width: $width-plus;
   max-width: 100%;
-  margin: 1rem auto 6rem;
+  margin: 1rem auto 2rem;
   padding: 1.2rem 1.5rem 1rem;
 
   &:hover {
@@ -41,6 +41,12 @@
     h1 {
       font-size: 1.4rem;
     }
+  }
+}
+.light-theme {
+  .tickets:hover {
+    box-shadow: 0 0 4px $color-pink, inset 0 0 4px $color-pink;
+    text-shadow: 0 0 2px $color-pink;
   }
 }
 </style>

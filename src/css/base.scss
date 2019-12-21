@@ -29,15 +29,11 @@ body {
       outline-color: $color-main;
     }
   }
-
-  @media screen and (prefers-color-scheme: light) {
-    background: $color-white;
-    color: $color-black;
-  }
+  transition: all .4s ease-in-out;
 }
 
 main {
-  padding: 2rem 3rem 8rem;
+  padding: 2rem 3rem 2rem;
   position: relative;
   z-index: 100;
 
@@ -99,17 +95,28 @@ h1, h2, h3, h4, h5, h6 {
     &:nth-child(3n+1) {
       color: $color-yellow;
     }
+    &:hover {
+      text-decoration: underline;
+    }
   }
   ul {
     max-width: $width-p;
     margin: 0 auto;
+    line-height: 1.5;
   }
 }
 
 h1 {
   font-size: 5rem;
   &.page-title {
-    margin-top: 4rem;
+    font-size: 7rem;
+    max-width: 35rem;
+    margin-top: 7rem;
+    -webkit-text-stroke: $text-outline $color-main;
+    text-stroke: $text-outline $color-main;
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 2rem;
   }
 }
 
@@ -121,6 +128,17 @@ h2 {
     font-weight: normal;
     font-family: $monospace;
     margin-bottom: 2rem;
+  }
+
+  &.section-heading {
+    -webkit-text-stroke: $text-outline $color-main;
+    text-stroke: $text-outline $color-main;
+    color: transparent;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -173,17 +191,10 @@ p {
     box-shadow: 0 0 10px $color-pink;
     color: $color-white;
   }
-
-  @media screen and (prefers-color-scheme: light) {
-    &:hover {
-      box-shadow: 0 0 4px $color-pink;
-      color: $color-black;
-    }
-  }
 }
 
 .hero {
-  min-height: 40vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,6 +202,10 @@ p {
 }
 
 @media screen and (prefers-color-scheme: light) {
+  body {
+    background: $color-white;
+    color: $color-black;
+  }
   a {
     color: $color-blue;
   }
@@ -204,5 +219,63 @@ p {
         color: $color-purple;
       }
     }
+  }
+  .button {
+    color: $color-black;
+  }
+  .button:hover {
+    box-shadow: 0 0 4px $color-pink;
+    color: $color-black;
+  }
+  h1.page-title {
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+    color: $color-black;
+  }
+  h2.section-heading {
+    -webkit-text-stroke: $text-outline $color-black;
+    text-stroke: $text-outline $color-black;
+  }
+}
+
+
+.light-theme {
+  background: $color-white;
+  color: $color-black;
+  a {
+    color: $color-blue;
+  }
+  .simple-page {
+    p a {
+      color: $color-blue;
+      &:nth-child(2n+1) {
+        color: $color-pink;
+      }
+      &:nth-child(3n+1) {
+        color: $color-purple;
+      }
+    }
+  }
+  .button {
+    color: $color-black;
+  }
+  .button:hover {
+    box-shadow: 0 0 4px $color-pink;
+    color: $color-black;
+  }
+  h1.page-title {
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+    color: $color-black;
+  }
+  h2.section-heading {
+    -webkit-text-stroke: $text-outline $color-black;
+    text-stroke: $text-outline $color-black;
+  }
+}
+
+@media (max-width: $media-m) {
+  h1.page-title {
+    font-size: 5rem;
   }
 }

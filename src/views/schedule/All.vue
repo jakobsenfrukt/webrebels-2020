@@ -8,7 +8,7 @@
     <div class="jump"><a href="#friday">Jump to Friday</a></div>
     <div class="schedule">
       <div class="schedule-day day1" id="thursday">
-        <h2 class="schedule-title">Thursday May 14th</h2>
+        <h2 class="section-heading schedule-title">Thursday May 14th</h2>
         <div class="contents-wrapper">
           <div class="contents">
             <div class="event info">
@@ -105,7 +105,7 @@
         </div>
       </div>
       <div class="schedule-day day2" id="friday">
-        <h2 class="schedule-title">Friday May 15th</h2>
+        <h2 class="section-heading schedule-title">Friday May 15th</h2>
         <div class="contents-wrapper">
           <div class="contents">
             <div class="event info">
@@ -228,8 +228,7 @@ export default {
   }
 
   &-title {
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 2.2rem;
   }
 
   .event {
@@ -301,6 +300,16 @@ export default {
   }
 }
 @media screen and (prefers-color-scheme: light) {
+  .schedule .event.pause {
+    border-top: 2px solid $color-orange;
+    border-bottom: 2px solid $color-orange;
+    padding: .5rem 0;
+    .event-title {
+      color: $color-orange;
+    }
+  }
+}
+.light-theme {
   .schedule .event.pause {
     border-top: 2px solid $color-orange;
     border-bottom: 2px solid $color-orange;

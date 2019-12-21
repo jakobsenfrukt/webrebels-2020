@@ -2,7 +2,9 @@
   <div id="app">
     <Oslo />
     <Header />
-    <transition name="fade"><router-view/></transition>
+    <transition name="fade">
+      <router-view />
+    </transition>
     <Footer />
   </div>
 </template>

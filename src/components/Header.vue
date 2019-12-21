@@ -3,7 +3,11 @@
     <nav class="main-nav">
       <div class="logo">
         <a href="/"><Logo /></a>
-        <span class="dates">Oslo 14&mdash;15th May 2020</span>
+        <span class="dates">
+          Oslo<br />
+          14&mdash;15th May<br />
+          2020
+        </span>
       </div>
       <div class="site-nav" :class="{open: open}">
         <div class="menu-toggle" @click="open = !open">
@@ -15,7 +19,7 @@
           <li @click="open = false"><router-link to="/speakers">Speakers</router-link></li>
           <li @click="open = false"><router-link to="/info">Info</router-link></li>
           <li @click="open = false"><router-link to="/about">About</router-link></li>
-          <li class="moon">&#9790;</li>
+          <li class="moon" @click="changeTheme()">&#9790;</li>
         </ul>
       </div>
     </nav>
@@ -33,6 +37,11 @@ export default {
     return {
       open: false
     }
+  },
+  methods: {
+    changeTheme: function() {
+      document.body.classList.toggle('light-theme');
+    }
   }
 }
 </script>
@@ -45,24 +54,25 @@ export default {
 }
 .main-nav {
   .logo {
-    width: 12rem;
+    width: 16rem;
     max-width: 30%;
     position: fixed;
-    top: 3rem;
-    right: -.8rem;
+    top: 4rem;
+    right: -.9rem;
     z-index: 666;
     padding-bottom: 1.2rem;
 
     .dates {
       display: block;
       font-family: $monospace;
-      font-size: $font-s;
+      font-size: 1rem;
       text-transform: uppercase;
       color: $color-main;
       position: relative;
-      right: -.2rem;
+      right: 1.6rem;
       text-align: right;
       line-height: 1;
+      margin-top: -.5rem;
     }
     
     @media screen and (prefers-color-scheme: light) {
@@ -108,6 +118,7 @@ export default {
       &.moon {
         color: $color-yellow;
         position: relative;
+        cursor: pointer;
       }
     }
 
@@ -128,10 +139,6 @@ export default {
         height: 1em;
         stroke: $color-yellow;
       }
-    }
-
-    @media screen and (prefers-color-scheme: light) {
-      background: linear-gradient(45deg, $color-purple, $color-orange);
     }
 
     @media (max-width: $media-s) {
@@ -197,6 +204,26 @@ export default {
     }
     &:focus {
       color: $color-link;
+    }
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  .main-nav {
+    .dates {
+      color: $color-black;
+    }
+    .site-nav ul, .site-nav .menu-toggle {
+      background: linear-gradient(45deg, $color-purple, $color-orange);
+    }
+  }
+}
+.light-theme {
+  .main-nav {
+    .dates {
+      color: $color-black;
+    }
+    .site-nav ul, .site-nav .menu-toggle {
+      background: linear-gradient(45deg, $color-purple, $color-orange);
     }
   }
 }

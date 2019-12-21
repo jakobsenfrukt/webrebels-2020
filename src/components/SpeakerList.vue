@@ -1,6 +1,6 @@
 <template>
   <section class="speakers index">
-    <h2 class="speakers-heading">Speakers</h2>
+    <h2 class="section-heading speakers-heading">Speakers</h2>
     <p class="lead">We’re putting the same effort and love into the conference and its line-up that you are used to from previous years.</p>
     <div class="speaker-list">
       <a v-for="(speaker, index) in speakers.slice(0,9)" :key="index" :href="`/speakers/#${speaker.id}`" class="speaker">
@@ -35,13 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/css/variables.scss';
-.speakers {
-  &-heading {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
-  }
-}
 .speaker-list {
   display: flex;
   justify-content: center;
@@ -55,8 +48,6 @@ export default {
   position: relative;
   padding: 1rem;
   text-align: center;
-
-  perspective: 700px;
 
   @media (min-width: $media-l) {
     width: 25%;
@@ -124,13 +115,21 @@ export default {
   }
 }
 .speaker:nth-child(odd) {
+  perspective: 1200px;
   .speaker-name {
     transform: rotateX(20deg) rotateY(-20deg);
   }
 }
 .speaker:nth-child(even) {
+  perspective: -1200px;
   .speaker-name {
     transform: rotateX(-2deg) rotateY(20deg);
+  }
+}
+.speaker:nth-child(1n+3) {
+  perspective: 1200px;
+  .speaker-name {
+    transform: rotateX(8deg) rotateY(20deg);
   }
 }
 .buttonbox {
@@ -149,6 +148,21 @@ export default {
       color: $color-black;
       box-shadow: -.4rem 0 0 .4rem $color-main, .4rem 0 0 .4rem $color-main;
     }
+  }
+  .speaker:hover .speaker-name span {
+    color: $color-teal;
+  }
+}
+.light-theme {
+  .speaker-name {
+    span {
+      background: $color-main;
+      color: $color-black;
+      box-shadow: -.4rem 0 0 .4rem $color-main, .4rem 0 0 .4rem $color-main;
+    }
+  }
+  .speaker:hover .speaker-name span {
+    color: $color-teal;
   }
 }
 </style>

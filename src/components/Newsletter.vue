@@ -1,6 +1,6 @@
 <template>
   <div class="newsletter" :class="{ closed: closed }">
-    <h2>Sign up to our newsletter</h2>
+    <h2 class="section-heading">Sign up to our newsletter</h2>
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
       <form action="https://webrebels.us3.list-manage.com/subscribe/post?u=f515e6756e5ffeffd7a28a60d&amp;id=7d5e649dbe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -76,8 +76,7 @@ export default {
   }
 }
 .mc-field-group {
-  width: $width-p;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 
   label {
@@ -99,8 +98,7 @@ export default {
 }
 #mc-embedded-subscribe {
   font-family: $monospace;
-  width: $width-p;
-  max-width: 100%;
+  width: 100%;
   margin: 1rem auto;
   cursor: pointer;
 }
@@ -110,6 +108,18 @@ export default {
   }
 }
 @media screen and (prefers-color-scheme: light) {
+  .newsletter {
+    background: transparent;
+    box-shadow: 0 0 0 2px $color-black;
+    color: $color-black;
+  }
+  .mc-field-group {
+    .email {
+      border: 2px solid $color-black;
+    }
+  }
+}
+.light-theme {
   .newsletter {
     background: transparent;
     box-shadow: 0 0 0 2px $color-black;

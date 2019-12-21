@@ -104,4 +104,15 @@ export default {
     }
   }
 }
+.light-theme {
+  .footer-nav {
+    p {
+      color: $color-white;
+    }
+  }
+  .some a {
+    color: $color-black;
+    border-bottom: .2rem solid $color-black;
+  }
+}
 </style>

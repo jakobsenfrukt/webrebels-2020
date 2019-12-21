@@ -40,4 +40,9 @@
     }
   }
 }
+.light-theme {
+  .oslo {
+    opacity: .2;
+  }
+}
 </style>

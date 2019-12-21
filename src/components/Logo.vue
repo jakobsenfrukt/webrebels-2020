@@ -52,4 +52,15 @@ svg {
     fill: $color-main;
   }
 }
+.light-theme {
+  #banner-bg path {
+    fill: $color-black;
+  }
+  #banner path {
+    fill: $color-black;
+  }
+  #letters path {
+    fill: $color-main;
+  }
+}
 </style>

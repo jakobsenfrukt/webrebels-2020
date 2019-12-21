@@ -1,11 +1,10 @@
 <template>
   <div class="home">
     <main>
-      <p class="intro">A non-profit community conference for anyone who loves developing applications and services using web technology. Two days, one track, 16 speakers.</p>
+      <p class="intro"><a href="/about">Web Rebels</a> is a non-profit community conference for anyone who loves developing applications and services using web technology. Two days, one track, 16 speakers.</p>
       <section class="hero">
-        <img src="https://www.cameronsworld.net/img/content/22/right-side/24.gif" /><br /><br />
         <h1 class="index-title">We'll be back in 2020</h1>
-        <h2 class="index-subtitle subtitle">Join us in Oslo on 14th and 15th May</h2>
+        <h2 class="index-subtitle subtitle"><span>Join us in Oslo on 14th and 15th May</span></h2>
         <Tickets />
       </section>
       <!--<div class="hero-image">
@@ -37,24 +36,63 @@ export default {
 @import '../css/variables.scss';
 .intro {
   font-family: $monospace;
-  margin: 0 0 4rem;
+  margin: .5rem 0 4rem;
   width: $width-p;
-  max-width: 70%;
+  max-width: 66%;
   color: $color-white;
 }
 .index-title {
-  font-size: 5rem;
+  font-size: 7rem;
+  -webkit-text-stroke: $text-outline $color-main;
+  text-stroke: $text-outline $color-main;
+  color: transparent;
+  max-width: 54rem;
+  border-top: $text-outline solid $color-main;
+  padding: 4rem 2rem 2rem;
+  margin-bottom: 0;
 }
 .index-subtitle {
   font-size: 1,4rem;
   font-weight: 400;
+  text-transform: uppercase;
+
+  color: $color-main;
+  text-align: center;
+  margin-bottom: 3rem;
 }
+.index-subtitle span {
+  display: inline-block;
+  position: relative;  
+}
+.index-subtitle span:before,
+.index-subtitle span:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-bottom: $text-outline solid $color-main;
+  top: .25em;
+  width: 7rem;
+}
+.index-subtitle span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.index-subtitle span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+
 .hero {
-  min-height: 50vh;
+  min-height: 66vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .button {
+    margin-bottom: 1rem;
+  }
 }
 .hero-image {
   width: 100%;
@@ -84,14 +122,84 @@ export default {
     }
   }
 }
+@media (max-width: $media-m) {
+  .index-title {
+    padding: 2.5rem 0 2rem;
+    font-size: 5.5rem;
+    border-top: none;
+  }
+  .index-subtitle span:before,
+  .index-subtitle span:after {
+    border-bottom: none;
+  }
+}
 @media (max-width: $media-s) {
   .index-title {
-    font-size: 3.4rem;
+    font-size: 4.5rem;
+    padding: 2.5rem 0 2rem;
+    -webkit-text-stroke: $text-outline-s $color-main;
+    text-stroke: $text-outline-s $color-main;
+  }
+  .intro {
+    margin-bottom: 1rem;
   }
 }
 @media screen and (prefers-color-scheme: light) {
   .intro {
     color: $color-black;
+  }
+  .index-title {
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+    color: black;
+  }
+  .index-subtitle {
+    color: $color-black;
+  }
+  .index-subtitle span:before,
+  .index-subtitle span:after {
+    border-bottom: $text-outline solid $color-black;
+  }
+  @media (max-width: $media-m) {
+    .index-title {
+      padding: 2.5rem 0 2rem;
+      font-size: 5.5rem;
+      border-top: none;
+    }
+    .index-subtitle span:before,
+    .index-subtitle span:after {
+      border-bottom: none;
+    }
+  }
+}
+.light-theme {
+  .intro {
+    color: $color-black;
+  }
+  .index-title {
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+    color: black;
+    border-top: $text-outline solid $color-black;
+  }
+  .index-subtitle {
+    color: $color-black;
+  }
+  .index-subtitle span:before,
+  .index-subtitle span:after {
+    border-bottom: $text-outline solid $color-black;
+  }
+
+  @media (max-width: $media-m) {
+    .index-title {
+      padding: 2.5rem 0 2rem;
+      font-size: 5.5rem;
+      border-top: none;
+    }
+    .index-subtitle span:before,
+    .index-subtitle span:after {
+      border-bottom: none;
+    }
   }
 }
 </style>
