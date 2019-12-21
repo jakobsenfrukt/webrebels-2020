@@ -149,6 +149,7 @@ export default {
         align-items: center;
         align-content: center;
         height: 100vh;
+        padding-bottom: 5rem;
         transform: translateY(-100%);
         transition: transform .3s ease-in-out;
       }
