@@ -28,13 +28,6 @@
     color: inherit;
     width: 100%;
   }
-
-  @media screen and (prefers-color-scheme: light) {
-    &:hover {
-      box-shadow: 0 0 4px $color-pink, inset 0 0 4px $color-pink;
-      text-shadow: 0 0 2px $color-pink;
-    }
-  }
   @media (max-width: $media-s) {
     width: 100%;
 

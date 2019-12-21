@@ -107,18 +107,6 @@ export default {
     width: 94%;
   }
 }
-@media screen and (prefers-color-scheme: light) {
-  .newsletter {
-    background: transparent;
-    box-shadow: 0 0 0 2px $color-black;
-    color: $color-black;
-  }
-  .mc-field-group {
-    .email {
-      border: 2px solid $color-black;
-    }
-  }
-}
 .light-theme {
   .newsletter {
     background: transparent;

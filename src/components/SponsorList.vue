@@ -65,12 +65,6 @@
     }
   }
 }
-
-@media screen and (prefers-color-scheme: light) {
-  .friend-logo {
-    filter: none;
-  }
-}
 .light-theme {
   .friend-logo {
     filter: none;

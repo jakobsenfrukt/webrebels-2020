@@ -144,34 +144,7 @@ export default {
     margin-bottom: 1rem;
   }
 }
-@media screen and (prefers-color-scheme: light) {
-  .intro {
-    color: $color-black;
-  }
-  .index-title {
-    -webkit-text-stroke: 0;
-    text-stroke: 0;
-    color: black;
-  }
-  .index-subtitle {
-    color: $color-black;
-  }
-  .index-subtitle span:before,
-  .index-subtitle span:after {
-    border-bottom: $text-outline solid $color-black;
-  }
-  @media (max-width: $media-m) {
-    .index-title {
-      padding: 2.5rem 0 2rem;
-      font-size: 5.5rem;
-      border-top: none;
-    }
-    .index-subtitle span:before,
-    .index-subtitle span:after {
-      border-bottom: none;
-    }
-  }
-}
+
 .light-theme {
   .intro {
     color: $color-black;

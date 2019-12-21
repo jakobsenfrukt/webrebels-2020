@@ -190,43 +190,6 @@ export default {
   }
 }
 
-@media screen and (prefers-color-scheme: light) {
-  .speaker {
-    .schedule-time {
-      background: $color-yellow;
-      color: $color-black;
-    }
-    .read-more {
-      color: $color-black;
-      border-color: $color-pink;
-    }
-    .header {
-      &:hover {
-        text-shadow: 0 0 2px $color-pink;
-        &:after {
-          box-shadow: 0 0 5px $color-pink;
-        }
-        .talk-title {
-          color: $color-black;
-        }
-      }
-    }
-    .suptitle {
-      color: $color-pink;
-    }
-
-    .talk-title {
-      color: $color-black;
-    }
-
-    &-some {
-      .some-item a {
-        color: $color-blue;
-      }
-    }
-  }
-}
-
 .light-theme {
   .speaker {
     .schedule-time {

@@ -201,44 +201,6 @@ p {
   justify-content: center;
 }
 
-@media screen and (prefers-color-scheme: light) {
-  body {
-    background: $color-white;
-    color: $color-black;
-  }
-  a {
-    color: $color-blue;
-  }
-  .simple-page {
-    p a {
-      color: $color-blue;
-      &:nth-child(2n+1) {
-        color: $color-pink;
-      }
-      &:nth-child(3n+1) {
-        color: $color-purple;
-      }
-    }
-  }
-  .button {
-    color: $color-black;
-  }
-  .button:hover {
-    box-shadow: 0 0 4px $color-pink;
-    color: $color-black;
-  }
-  h1.page-title {
-    -webkit-text-stroke: 0;
-    text-stroke: 0;
-    color: $color-black;
-  }
-  h2.section-heading {
-    -webkit-text-stroke: $text-outline $color-black;
-    text-stroke: $text-outline $color-black;
-  }
-}
-
-
 .light-theme {
   background: $color-white;
   color: $color-black;

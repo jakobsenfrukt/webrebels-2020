@@ -74,12 +74,6 @@ export default {
       line-height: 1;
       margin-top: -.5rem;
     }
-    
-    @media screen and (prefers-color-scheme: light) {
-      .dates {
-        color: $color-black;
-      }
-    }
     @media (max-width: $media-s) {
       position: absolute;
     }
@@ -205,16 +199,6 @@ export default {
     }
     &:focus {
       color: $color-link;
-    }
-  }
-}
-@media screen and (prefers-color-scheme: light) {
-  .main-nav {
-    .dates {
-      color: $color-black;
-    }
-    .site-nav ul, .site-nav .menu-toggle {
-      background: linear-gradient(45deg, $color-purple, $color-orange);
     }
   }
 }

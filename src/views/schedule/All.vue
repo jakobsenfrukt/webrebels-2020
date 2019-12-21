@@ -299,16 +299,7 @@ export default {
     }
   }
 }
-@media screen and (prefers-color-scheme: light) {
-  .schedule .event.pause {
-    border-top: 2px solid $color-orange;
-    border-bottom: 2px solid $color-orange;
-    padding: .5rem 0;
-    .event-title {
-      color: $color-orange;
-    }
-  }
-}
+
 .light-theme {
   .schedule .event.pause {
     border-top: 2px solid $color-orange;

@@ -97,13 +97,6 @@ export default {
     }
   }
 }
-@media screen and (prefers-color-scheme: light) {
-  .footer-nav {
-    p {
-      color: $color-white;
-    }
-  }
-}
 .light-theme {
   .footer-nav {
     p {

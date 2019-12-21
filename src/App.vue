@@ -19,6 +19,11 @@ export default {
     Header,
     Footer,
     Oslo
+  },
+  beforeMount: function() {
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      document.body.classList.add('light-theme');
+    }
   }
 }
 </script>

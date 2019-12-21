@@ -31,9 +31,6 @@
     position: absolute;
     bottom: 0;
   }
-  @media screen and (prefers-color-scheme: light) {
-    opacity: .2;
-  }
   @media (max-width: $media-s) {
     svg {
       width: 150%;

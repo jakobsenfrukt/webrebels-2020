@@ -141,18 +141,6 @@ export default {
     margin: .5rem .5rem;
   }
 }
-@media screen and (prefers-color-scheme: light) {
-  .speaker-name {
-    span {
-      background: $color-main;
-      color: $color-black;
-      box-shadow: -.4rem 0 0 .4rem $color-main, .4rem 0 0 .4rem $color-main;
-    }
-  }
-  .speaker:hover .speaker-name span {
-    color: $color-teal;
-  }
-}
 .light-theme {
   .speaker-name {
     span {
