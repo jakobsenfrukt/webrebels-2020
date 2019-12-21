@@ -47,7 +47,6 @@ export default {
   text-stroke: $text-outline $color-main;
   color: transparent;
   max-width: 54rem;
-  border-top: $text-outline solid $color-main;
   padding: 4rem 2rem 2rem;
   margin-bottom: 0;
 }
@@ -153,7 +152,6 @@ export default {
     -webkit-text-stroke: 0;
     text-stroke: 0;
     color: black;
-    border-top: $text-outline solid $color-black;
   }
   .index-subtitle {
     color: $color-black;
