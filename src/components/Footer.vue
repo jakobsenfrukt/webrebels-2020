@@ -51,7 +51,7 @@ export default {
   align-items: space-between;
   flex-wrap: wrap;
   max-width: $width-plus;
-  margin: 0 auto 5rem;
+  margin: 9rem auto 1rem;
 
   p {
     width: 100%;

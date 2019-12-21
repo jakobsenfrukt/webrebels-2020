@@ -40,6 +40,7 @@
   .tickets:hover {
     box-shadow: 0 0 4px $color-pink, inset 0 0 4px $color-pink;
     text-shadow: 0 0 2px $color-pink;
+    color: $color-pink;
   }
 }
 </style>

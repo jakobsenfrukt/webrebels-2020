@@ -82,6 +82,10 @@ export default {
   label {
     font-family: $monospace;
     margin: 0;
+    padding: 2px 5px;
+    display: block;
+    background: $color-black;
+    color: $color-white;
   }
   .email {
     width: 100%;

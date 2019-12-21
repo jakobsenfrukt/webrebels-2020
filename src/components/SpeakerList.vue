@@ -77,7 +77,7 @@ export default {
       transition: all 0.2s ease-in-out;
     }
     &_fallback {
-      background: $color-yellow;
+      background: $color-teal;
       width: 100%;
       padding-top: 100%;
       border-radius: 50%;

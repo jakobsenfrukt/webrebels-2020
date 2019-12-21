@@ -217,7 +217,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: $width-full;
-  margin: 0 auto 5rem;
+  margin: 5rem auto 5rem;
 
   &-day {
     width: 45%;

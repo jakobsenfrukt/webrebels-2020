@@ -71,7 +71,7 @@ export default {
       position: relative;
       right: 1.6rem;
       text-align: right;
-      line-height: 1;
+      line-height: 1.1;
       margin-top: -.5rem;
     }
     @media (max-width: $media-s) {

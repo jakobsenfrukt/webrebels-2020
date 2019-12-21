@@ -76,12 +76,6 @@ h1, h2, h3, h4, h5, h6 {
   h1, h2, h3, h4, h5, h6 {
     margin-top: 6rem;
   }
-  h1 {
-    &.page-title {
-      margin: 4rem auto 3rem;
-      text-align: center;
-    }
-  }
   p {
     &.lead {
       max-width: $width-lead;
@@ -239,5 +233,11 @@ p {
 @media (max-width: $media-m) {
   h1.page-title {
     font-size: 5rem;
+  }
+}
+
+@media (max-width: $media-s) {
+  h2.section-heading {
+    font-size: 3.5rem;
   }
 }

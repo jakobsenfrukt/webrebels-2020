@@ -49,6 +49,7 @@ export default {
   max-width: 54rem;
   padding: 4rem 2rem 2rem;
   margin-bottom: 0;
+  line-height: 1.05;
 }
 .index-subtitle {
   font-size: 1,4rem;
@@ -58,6 +59,9 @@ export default {
   color: $color-main;
   text-align: center;
   margin-bottom: 3rem;
+  max-width: 20rem;
+  padding: 0 1rem;
+  line-height: 1.3;
 }
 .index-subtitle span {
   display: inline-block;
@@ -69,16 +73,17 @@ export default {
   position: absolute;
   height: 1px;
   border-bottom: $text-outline solid $color-main;
-  top: .25em;
-  width: 7rem;
+  top: 1.15em;
+  width: 8rem;
+  box-shadow: 0 0 .5em rgba(255, 255, 255, .5);
 }
 .index-subtitle span:before {
   right: 100%;
-  margin-right: 15px;
+  margin-right: .1rem;
 }
 .index-subtitle span:after {
   left: 100%;
-  margin-left: 15px;
+  margin-left: .1rem;
 }
 
 
@@ -123,21 +128,22 @@ export default {
 }
 @media (max-width: $media-m) {
   .index-title {
-    padding: 2.5rem 0 2rem;
     font-size: 5.5rem;
     border-top: none;
-  }
-  .index-subtitle span:before,
-  .index-subtitle span:after {
-    border-bottom: none;
   }
 }
 @media (max-width: $media-s) {
   .index-title {
-    font-size: 4.5rem;
-    padding: 2.5rem 0 2rem;
+    font-size: 5rem;
     -webkit-text-stroke: $text-outline-s $color-main;
     text-stroke: $text-outline-s $color-main;
+  }
+  .index-subtitle {
+    font-size: 1.3rem;
+  }
+  .index-subtitle span:before,
+  .index-subtitle span:after {
+    width: 6rem;
   }
   .intro {
     margin-bottom: 1rem;
@@ -166,10 +172,6 @@ export default {
       padding: 2.5rem 0 2rem;
       font-size: 5.5rem;
       border-top: none;
-    }
-    .index-subtitle span:before,
-    .index-subtitle span:after {
-      border-bottom: none;
     }
   }
 }
