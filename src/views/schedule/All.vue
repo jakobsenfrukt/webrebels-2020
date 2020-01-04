@@ -233,7 +233,7 @@ export default {
 
   .event {
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
 
     .when {
       font-size: 1.2rem;
@@ -258,7 +258,7 @@ export default {
     &.info {
       border-top: 2px solid $color-pink;
       border-bottom: 2px solid $color-pink;
-      padding: .5rem 0;
+      padding: .8rem 0;
      .event-title {
         color: $color-pink;
       }
@@ -266,7 +266,7 @@ export default {
     &.pause {
       border-top: 2px solid $color-yellow;
       border-bottom: 2px solid $color-yellow;
-      padding: .5rem 0;
+      padding: .8rem 0;
      .event-title {
         color: $color-yellow;
       }
@@ -274,7 +274,7 @@ export default {
     &.party {
       border-top: 2px solid $color-pink;
       border-bottom: 2px solid $color-pink;
-      padding: .5rem 0;
+      padding: .8rem 0;
       .event-title {
         color: $color-pink;
       }
