@@ -252,6 +252,7 @@ export default {
     &-title {
       margin: 0;
       line-height: 1.3;
+      margin-bottom: .2rem;
       text-align: left;
       font-size: 1.4rem;
     }
