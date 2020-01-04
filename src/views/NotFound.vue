@@ -2,7 +2,15 @@
   <div class="notfound">
     <main>
       <section>
-        <h1>404: Page not found!</h1>
+        <div class="hero">
+          <h1>404</h1>
+          <p class="lead">
+            Page not found! Just in case, are you sure you typed the URL correctly? In that case, there's probably something wrong on our end. Sorry about that!
+            <br />
+            <br />
+            <a href="/">&rarr; Go to the front page</a>
+          </p>
+        </div>
       </section>
     </main>
   </div>
@@ -18,7 +26,9 @@ export default {
 <style scoped lang="scss">
 @import '../css/variables.scss';
 h1 {
-  font-size: 1.8rem;
-  color: red;
+  font-size: 7rem;
+  color: $color-red;
+  font-family: $monospace;
+  letter-spacing: 2px;
 }
 </style>
