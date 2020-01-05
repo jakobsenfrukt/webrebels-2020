@@ -128,13 +128,13 @@ export default {
 }
 @media (max-width: $media-m) {
   .index-title {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     border-top: none;
   }
 }
 @media (max-width: $media-s) {
   .index-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
     -webkit-text-stroke: $text-outline-s $color-main;
     text-stroke: $text-outline-s $color-main;
   }

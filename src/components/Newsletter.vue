@@ -73,6 +73,7 @@ export default {
     margin: 1rem auto;
     padding: .5rem 1rem;
     border: none;
+    border-radius: 0;
   }
 }
 .mc-field-group {
@@ -84,8 +85,8 @@ export default {
     margin: 0;
     padding: 2px 5px;
     display: block;
-    background: $color-black;
-    color: $color-white;
+    background: $color-main;
+    color: $color-black;
   }
   .email {
     width: 100%;
@@ -105,6 +106,7 @@ export default {
   width: 100%;
   margin: 1rem auto;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 @media (max-width: $media-s) {
   .newsletter {
@@ -120,6 +122,10 @@ export default {
   .mc-field-group {
     .email {
       border: 2px solid $color-black;
+    }
+    label {
+      background: $color-black;
+      color: $color-white;
     }
   }
 }

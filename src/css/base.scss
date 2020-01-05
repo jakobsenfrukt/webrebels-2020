@@ -165,7 +165,7 @@ p {
   }
 }
 
-.button {
+.button, input[type=submit] {
   display: block;
   text-align: center;
   background: $color-pink;

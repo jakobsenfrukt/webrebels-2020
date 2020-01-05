@@ -89,6 +89,7 @@ export default {
     margin-bottom: 0;
     position: relative;
     top: -4rem;
+    z-index: 10;
     font-weight: 800;
     padding: .5rem .8rem .1rem;
     line-height: 1.56;
