@@ -1,6 +1,7 @@
 <template>
   <section class="friends index">
     <h2 class="section-heading">Sponsors</h2>
+    <p class="lead">Web Rebels would not be possible without our awesome sponsors.</p>
     <div class="friend-list">
       <a href="#" class="friend">
         <img class="friend-logo" src="https://2017.webrebels.org/files/acando.svg" />

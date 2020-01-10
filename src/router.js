@@ -37,6 +37,11 @@ export default new Router({
       component: () => import('./views/schedule/All.vue')
     },
     {
+      path: '/sponsors',
+      name: 'sponsors',
+      component: () => import('./views/Sponsors.vue')
+    },
+    {
       path: '*',
       name: 'notfound',
       component: () => import('./views/NotFound.vue')
