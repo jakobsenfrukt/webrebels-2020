@@ -7,10 +7,22 @@
         <h2 class="index-subtitle subtitle"><span>Join us in Oslo on 14th and 15th May</span></h2>
         <Tickets />
       </section>
-      <!--<div class="hero-image">
+      <section class="simple-page">
+        <h2>What happened to Web Rebels 2019?</h2>
+        <p>Usually, after wrapping up the conference, we secure our venue for the following year straight away. This time however, we ran into an unexpected challenge: none of the dates available worked for us.</p>
+        <p>We went looking for alternatives but ultimately, nothing fit what we were looking for. When you run a conference, you always work within certain constraints, and this time, we couldn’t make it work.</p>
+        <p>As a consequence, there was no Web Rebels in 2019.</p>
+        <p>The good news is that we have the dates and the venue we want for 2020.</p>
+      </section>
+      <div class="hero-image">
         <img src="https://2018.webrebels.org/static/webrebelBIG.759f990b.jpg" />
-        <h1 class="hero-image-heading"><span class="heading-top">Class of Web Rebels 2020</span><span class="heading-bottom">we love you!</span></h1>
-      </div>-->
+        <h1 class="hero-image-heading"><span>Class of Web Rebels 2020<br/>we love you!</span></h1>
+      </div>
+      <div class="video">
+        <div class="iframe-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Kq6vqdqku-U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
       <SpeakerList />
       <SponsorList />
     </main>
@@ -86,7 +98,6 @@ export default {
   margin-left: .1rem;
 }
 
-
 .hero {
   min-height: 66vh;
   display: flex;
@@ -100,7 +111,8 @@ export default {
 }
 .hero-image {
   width: 100%;
-  margin: 0 auto 10rem;
+  max-width: 1200px;
+  margin: 5rem auto 10rem;
   position: relative;
 
   &:after {
@@ -114,17 +126,30 @@ export default {
 
   &-heading {
     margin: -5rem auto 0;
-    font-size: 2rem;
+    font-size: 3rem;
     display: block;
-    .heading-top {
-      display: block;
-      background: $color-black;
-    }
-    .heading-bottom {
-      display: block;
-      background: $color-black;
+    margin-bottom: 0;
+    position: relative;
+    top: -100%;
+    z-index: 10;
+    font-weight: 800;
+    padding: .5rem .8rem .1rem;
+
+    transform-origin: center;
+    transform: rotateX(-2deg) rotateY(20deg);
+
+    span {
+      background: $color-main;
+      color: $color-black;
+      box-shadow: -.4rem 0 0 .4rem $color-main, .4rem 0 0 .4rem $color-main;
+      transition: all .2s ease-in-out;
     }
   }
+}
+
+.video {
+  width: $width-lead;
+  margin: 5rem auto 10rem;
 }
 @media (max-width: $media-m) {
   .index-title {
@@ -165,6 +190,14 @@ export default {
   .index-subtitle span:before,
   .index-subtitle span:after {
     border-bottom: $text-outline solid $color-black;
+  }
+
+  .hero-heading {
+    span {
+      background: $color-black;
+      color: $color-main;
+      box-shadow: -.4rem 0 0 .4rem $color-black, .4rem 0 0 .4rem $color-black;
+    }
   }
 
   @media (max-width: $media-m) {

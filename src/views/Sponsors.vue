@@ -27,16 +27,6 @@
   </main>
 </template>
 
-<script>
-import Tickets from '@/components/Tickets.vue'
-
-export default {
-  components: {
-    Tickets
-  }
-}
-</script>
-
 <style scoped lang="scss">
 @import '../css/variables.scss';
 .package-list {
@@ -44,18 +34,24 @@ export default {
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-between;
+  margin: 5rem auto;
 }
 .package {
   width: 49%;
   min-width: 20rem;
   background: $color-white;
   color: $color-black;
-  padding: 3rem;
+  padding: 3rem 5rem;
   margin: 1rem 0;
   position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 
   h2, p {
     margin: 0;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 .diamond {
@@ -65,16 +61,31 @@ export default {
   border-bottom: 70px solid $color-yellow;
   position: absolute;
   top: -6rem;
-  left: 0;
-}
-.diamond:after {
-  content: '';
-  position: absolute;
-  left: -50px;
-  top: 70px;
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-top: 70px solid darken($color-yellow, 24%);
+  left: .5rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 70px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 70px solid darken($color-yellow, 24%);
+  }
+
+  &.silver {
+    border-bottom: 70px solid #ccc;
+    &:after {
+      border-top: 70px solid darken(#ccc, 24%);
+    }
+  }
+
+  &.bronze {
+    border-bottom: 70px solid $color-orange;
+    &:after {
+      border-top: 70px solid darken($color-orange, 24%);
+    }
+  }
 }
 </style>

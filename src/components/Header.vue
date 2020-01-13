@@ -19,7 +19,7 @@
           <li @click="open = false"><router-link to="/speakers">Speakers</router-link></li>
           <li @click="open = false"><router-link to="/info">Info</router-link></li>
           <li @click="open = false"><router-link to="/about">About</router-link></li>
-          <li class="moon" @click="changeTheme()">&#9790;</li>
+          <li class="moon" @click="changeTheme()"><Moon /></li>
         </ul>
       </div>
     </nav>
@@ -28,10 +28,12 @@
 
 <script>
 import Logo from '@/components/Logo.vue'
+import Moon from '@/components/graphics/Moon.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Moon
   },
   data: function() {
     return {
@@ -110,7 +112,6 @@ export default {
         letter-spacing: 2px;
       }
       &.moon {
-        color: $color-yellow;
         position: relative;
         cursor: pointer;
       }
